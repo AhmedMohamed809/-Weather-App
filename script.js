@@ -6,8 +6,7 @@ function satup() {
       long = position.coords.longitude;
       lat = position.coords.latitude;
       const apiKey = "879c06bd326a87da4ffc25cdacf6a1ea";
-      let proxy = "https://cors-anywhere.herokuapp.com/";
-      const api = `${proxy}https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
+      const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
       fetch(api)
         .then((resp) => resp.json())
         .then((data) => getWeatherData(data));
