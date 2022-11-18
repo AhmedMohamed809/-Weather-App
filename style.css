@@ -13,6 +13,10 @@ body {
     align-items: center;
     font-family: sans-serif;
 }
+.name{
+    color: white;
+    margin-top: 30px;
+}
 .tempstyle{
     margin-top: 20px;
     border: 2px solid rgb(255, 255, 255);
