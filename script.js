@@ -26,7 +26,8 @@ function getWeatherData(data) {
 
   temp.textContent = `${Math.round(main.temp)}°F`;
   temp.addEventListener("click", () => {
-    let degree = Math.round(((Math.round(main.temp) - 32) * 5) / 9);
+    let degree = Math.round(main.temp - 273);
+    //let degree = ((main.temp) - 32) / 1.8;
     temp.textContent = `${degree}°C`;
   });
 }

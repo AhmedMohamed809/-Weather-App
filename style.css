@@ -25,7 +25,9 @@ body {
     justify-content:space-around;
     width: 300px;
 }
-
+#temp{
+    cursor: pointer;
+}
 #temp,.loction-timeZone{
     color: white;
     margin-top: 3px;
