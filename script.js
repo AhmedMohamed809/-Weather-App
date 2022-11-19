@@ -23,5 +23,10 @@ function getWeatherData(data) {
   const temp = document.querySelector("#temp");
   nameLocation.textContent = name;
   wetherOfTheLocation.innerText = weather[0].description;
-  temp.textContent = `${main.temp}F`;
+
+  temp.textContent = `${Math.round(main.temp)}°F`;
+  temp.addEventListener("click", () => {
+    let degree = Math.round(((Math.round(main.temp) - 32) * 5) / 9);
+    temp.textContent = `${degree}°C`;
+  });
 }
