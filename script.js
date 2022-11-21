@@ -24,10 +24,10 @@ function getWeatherData(data) {
   nameLocation.textContent = name;
   wetherOfTheLocation.innerText = weather[0].description;
 
-  temp.textContent = `${Math.round(main.temp)}°F`;
+  temp.textContent = `${Math.round(main.temp - 273)}°C`;
   temp.addEventListener("click", () => {
-    let degree = Math.round(main.temp - 273);
+    let degree = Math.round(main.temp);
     //let degree = ((main.temp) - 32) / 1.8;
-    temp.textContent = `${degree}°C`;
+    temp.textContent = `${degree}°F`;
   });
 }
